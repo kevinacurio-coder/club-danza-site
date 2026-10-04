@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club de Danza | Pasión en Movimiento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        ✦ <span id="siteName">Club de Danza</span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#estilos">Estilos</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#inscripcion">Inscripción</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+
+<!-- INICIO -->
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <span>ARTE • DISCIPLINA • PASIÓN</span>
+
+        <h1 id="heroTitle">
+            Baila, aprende y vive la música
+        </h1>
+
+        <p id="heroText">
+            Un espacio para desarrollar tu talento,
+            mejorar tu técnica y disfrutar la danza.
+        </p>
+
+        <div class="buttons">
+            <a href="#inscripcion" class="btn">
+                Inscribirme ahora
+            </a>
+
+            <a href="#estilos" class="btn secondary">
+                Ver estilos
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NOSOTROS -->
+<section class="section" id="nosotros">
+
+    <div class="section-title">
+        <span>QUIÉNES SOMOS</span>
+
+        <h2>
+            Un club donde cada paso cuenta
+        </h2>
+
+        <p id="aboutText">
+            Somos un club dedicado a la formación artística
+            y al desarrollo integral mediante la danza.
+        </p>
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🎯</div>
+
+            <h3>Misión</h3>
+
+            <p id="missionText">
+                Formar bailarines con disciplina,
+                creatividad y confianza, promoviendo
+                el bienestar, la expresión artística
+                y el trabajo en equipo.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">✨</div>
+
+            <h3>Visión</h3>
+
+            <p id="visionText">
+                Ser un club de danza reconocido
+                por su calidad formativa, ambiente
+                inclusivo y participación destacada
+                en eventos culturales.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">❤️</div>
+
+            <h3>Valores</h3>
+
+            <p id="valuesText">
+                Respeto, responsabilidad, disciplina,
+                compañerismo, creatividad, inclusión
+                y pasión por el arte.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ESTILOS -->
+<section class="section gray" id="estilos">
+
+    <div class="section-title">
+
+        <span>NUESTRAS CLASES</span>
+
+        <h2>
+            Encuentra tu ritmo
+        </h2>
+
+        <p>
+            Tenemos diferentes estilos para todos.
+        </p>
+
+    </div>
+
+
+    <div class="dance-grid">
+
+        <div class="dance-card urbano">
+            <div>🔥</div>
+            <h3>Urbano</h3>
+            <p>
+                Coreografías modernas,
+                energía y coordinación.
+            </p>
+        </div>
+
+
+        <div class="dance-card latino">
+            <div>💃</div>
+            <h3>Ritmos Latinos</h3>
+            <p>
+                Salsa, bachata y merengue.
+            </p>
+        </div>
+
+
+        <div class="dance-card contemporaneo">
+            <div>🌙</div>
+            <h3>Contemporáneo</h3>
+            <p>
+                Expresión corporal,
+                técnica y creatividad.
+            </p>
+        </div>
+
+
+        <div class="dance-card folklore">
+            <div>🌺</div>
+            <h3>Danza Folclórica</h3>
+            <p>
+                Cultura, tradición e identidad.
+            </p>
+        </div>
+
+
+        <div class="dance-card infantil">
+            <div>⭐</div>
+            <h3>Danza Infantil</h3>
+            <p>
+                Diversión, ritmo y coordinación
+                para los más pequeños.
+            </p>
+        </div>
+
+
+        <div class="dance-card fitness">
+            <div>⚡</div>
+            <h3>Dance Fitness</h3>
+            <p>
+                Música, movimiento y ejercicio.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HORARIOS -->
+<section class="section" id="horarios">
+
+    <div class="section-title">
+
+        <span>HORARIOS</span>
+
+        <h2>
+            Organiza tu semana
+        </h2>
+
+        <p>
+            Consulta nuestras clases disponibles.
+        </p>
+
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Días</th>
+                    <th>Hora</th>
+                    <th>Nivel</th>
+                </tr>
+            </thead>
+
+            <tbody id="scheduleBody"></tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- INSCRIPCION -->
+<section class="registration" id="inscripcion">
+
+    <div class="registration-text">
+
+        <span>INSCRIPCIONES ABIERTAS</span>
+
+        <h2>
+            Únete al Club de Danza
+        </h2>
+
+        <p>
+            Completa el formulario y nos pondremos
+            en contacto contigo.
+        </p>
+
+        <ul>
+            <li>✓ Clases para principiantes</li>
+            <li>✓ Profesores con experiencia</li>
+            <li>✓ Presentaciones y eventos</li>
+            <li>✓ Ambiente seguro y motivador</li>
+        </ul>
+
+    </div>
+
+
+    <form id="registrationForm">
+
+        <label>
+            Nombres y apellidos
+            <input
+                type="text"
+                name="name"
+                required
+                placeholder="Ej. Juan Pérez">
+        </label>
+
+
+        <label>
+            Edad
+            <input
+                type="number"
+                name="age"
+                required
+                min="5"
+                max="100">
+        </label>
+
+
+        <label>
+            Teléfono
+            <input
+                type="tel"
+                name="phone"
+                required
+                placeholder="09XXXXXXXX">
+        </label>
+
+
+        <label>
+            Correo electrónico
+            <input
+                type="email"
+                name="email"
+                required
+                placeholder="correo@gmail.com">
+        </label>
+
+
+        <label>
+            Estilo de danza
+
+            <select name="dance" required>
+
+                <option value="">
+                    Selecciona
+                </option>
+
+                <option>Urbano</option>
+                <option>Ritmos Latinos</option>
+                <option>Contemporáneo</option>
+                <option>Danza Folclórica</option>
+                <option>Danza Infantil</option>
+                <option>Dance Fitness</option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Nivel
+
+            <select name="level" required>
+
+                <option value="">
+                    Selecciona
+                </option>
+
+                <option>Principiante</option>
+                <option>Intermedio</option>
+                <option>Avanzado</option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Mensaje
+
+            <textarea
+                name="message"
+                placeholder="Cuéntanos algo...">
+            </textarea>
+
+        </label>
+
+
+        <button type="submit">
+            ENVIAR INSCRIPCIÓN
+        </button>
+
+        <p id="formMessage"></p>
+
+    </form>
+
+</section>
+
+
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+
+    <div class="section-title">
+
+        <span>CONTACTO</span>
+
+        <h2>
+            Estamos para ayudarte
+        </h2>
+
+    </div>
+
+
+    <div class="contact">
+
+        <p>
+            📞 <strong>Teléfono:</strong>
+            <span id="contactPhone">
+                099 000 0000
+            </span>
+        </p>
+
+        <p>
+            ✉️ <strong>Correo:</strong>
+            <span id="contactEmail">
+                clubdedanza@email.com
+            </span>
+        </p>
+
+        <p>
+            📍 <strong>Dirección:</strong>
+            <span id="contactAddress">
+                Ecuador
+            </span>
+        </p>
+
+        <p>
+            🕒 <strong>Horario:</strong>
+            <span id="contactHours">
+                Lunes a sábado
+            </span>
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>
+        ✦ <span id="footerSiteName">
+            Club de Danza
+        </span>
+    </h3>
+
+    <p>
+        Pasión en movimiento.
+    </p>
+
+    <p>
+        © <span id="year"></span>
+        Todos los derechos reservados.
+    </p>
+
+    <a href="admin.html">
+        🔐 Acceso administrador
+    </a>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

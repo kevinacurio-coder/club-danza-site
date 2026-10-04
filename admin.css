@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f5f2f7;
+
+    color: #241827;
+}
+
+
+/* LOGIN */
+
+#login {
+    min-height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d0911,
+            #42144d
+        );
+}
+
+.login-box {
+    width: 400px;
+    max-width: 90%;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.3);
+}
+
+.logo-admin {
+    width: 60px;
+    height: 60px;
+
+    margin: auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #d9216a;
+
+    color: white;
+
+    font-size: 25px;
+}
+
+.login-box input {
+    width: 100%;
+
+    padding: 13px;
+
+    margin: 20px 0;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+}
+
+.login-box button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #d9216a;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.login-box small {
+    display: block;
+
+    margin: 15px;
+
+    color: #777;
+}
+
+.login-box a {
+    color: #d9216a;
+}
+
+
+/* ADMIN */
+
+.hidden {
+    display: none !important;
+}
+
+#adminPanel {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 250px 1fr;
+}
+
+
+/* SIDEBAR */
+
+aside {
+    background: #17101f;
+
+    color: white;
+
+    padding: 30px 20px;
+}
+
+aside h2 {
+    margin-bottom: 30px;
+}
+
+aside button,
+aside a {
+    width: 100%;
+
+    display: block;
+
+    padding: 13px;
+
+    margin: 7px 0;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #ddd;
+
+    text-align: left;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+aside button:hover,
+aside a:hover {
+    background: #302039;
+}
+
+
+/* MAIN */
+
+main {
+    padding: 40px;
+}
+
+.panel {
+    background: white;
+
+    padding: 30px;
+
+    margin-top: 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.06);
+}
+
+.panel label {
+    display: block;
+
+    font-weight: bold;
+
+    margin: 15px 0;
+}
+
+.panel input,
+.panel textarea {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 7px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+}
+
+.panel textarea {
+    min-height: 90px;
+}
+
+.panel > button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #d9216a;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+}
+
+#saveMessage {
+    color: green;
+
+    font-weight: bold;
+}
+
+
+/* HORARIOS */
+
+.horario-item {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr 1fr auto;
+
+    gap: 10px;
+
+    margin: 15px 0;
+
+    padding: 15px;
+
+    background: #f6f2f7;
+
+    border-radius: 10px;
+}
+
+.horario-item input {
+    margin: 0;
+}
+
+
+/* TABLA */
+
+.table {
+    overflow-x: auto;
+
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+th {
+    background: #17101f;
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.delete {
+    background: #d9216a;
+
+    color: white;
+
+    border: none;
+
+    padding: 7px 10px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:800px) {
+
+    #adminPanel {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        min-height: auto;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .horario-item {
+        grid-template-columns: 1fr;
+    }
+}

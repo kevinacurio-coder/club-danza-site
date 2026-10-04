@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Administrador | Club de Danza</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+
+<!-- LOGIN -->
+
+<div id="login">
+
+    <div class="login-box">
+
+        <div class="logo-admin">
+            ✦
+        </div>
+
+        <h1>
+            Administrador
+        </h1>
+
+        <p>
+            Club de Danza
+        </p>
+
+
+        <form id="loginForm">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Contraseña"
+                required>
+
+
+            <button>
+                INGRESAR
+            </button>
+
+
+            <small>
+                Contraseña de demostración:
+                <b>danza2026</b>
+            </small>
+
+            <p id="loginError"></p>
+
+        </form>
+
+
+        <a href="index.html">
+            ← Volver al sitio
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- ADMIN -->
+
+<div id="adminPanel" class="hidden">
+
+    <aside>
+
+        <h2>
+            ✦ Danza Admin
+        </h2>
+
+
+        <button onclick="mostrarSeccion('contenido')">
+            📝 Contenido
+        </button>
+
+
+        <button onclick="mostrarSeccion('horarios')">
+            🕒 Horarios
+        </button>
+
+
+        <button onclick="mostrarSeccion('inscritos')">
+            👥 Inscritos
+        </button>
+
+
+        <a href="index.html">
+            🌐 Ver página
+        </a>
+
+
+        <button onclick="cerrarSesion()">
+            🚪 Cerrar sesión
+        </button>
+
+    </aside>
+
+
+    <main>
+
+        <h1>
+            Panel de administración
+        </h1>
+
+
+        <!-- CONTENIDO -->
+
+        <section id="contenido">
+
+            <div class="panel">
+
+                <h2>
+                    Editar página
+                </h2>
+
+
+                <label>
+                    Nombre del club
+
+                    <input id="aSiteName">
+
+                </label>
+
+
+                <label>
+                    Título principal
+
+                    <input id="aHeroTitle">
+
+                </label>
+
+
+                <label>
+                    Texto principal
+
+                    <textarea id="aHeroText"></textarea>
+
+                </label>
+
+
+                <label>
+                    Quiénes somos
+
+                    <textarea id="aAboutText"></textarea>
+
+                </label>
+
+
+                <label>
+                    Misión
+
+                    <textarea id="aMissionText"></textarea>
+
+                </label>
+
+
+                <label>
+                    Visión
+
+                    <textarea id="aVisionText"></textarea>
+
+                </label>
+
+
+                <label>
+                    Valores
+
+                    <textarea id="aValuesText"></textarea>
+
+                </label>
+
+
+                <h3>
+                    Información de contacto
+                </h3>
+
+
+                <label>
+                    Teléfono
+
+                    <input id="aPhone">
+
+                </label>
+
+
+                <label>
+                    Correo
+
+                    <input id="aEmail">
+
+                </label>
+
+
+                <label>
+                    Dirección
+
+                    <input id="aAddress">
+
+                </label>
+
+
+                <label>
+                    Horario de atención
+
+                    <input id="aHours">
+
+                </label>
+
+
+                <button onclick="guardarContenido()">
+                    💾 GUARDAR CAMBIOS
+                </button>
+
+
+                <p id="saveMessage"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- HORARIOS -->
+
+        <section
+            id="horarios"
+            class="hidden">
+
+            <div class="panel">
+
+                <h2>
+                    Administrar horarios
+                </h2>
+
+
+                <button onclick="agregarHorario()">
+                    + Agregar horario
+                </button>
+
+
+                <div id="listaHorarios"></div>
+
+
+                <button onclick="guardarHorarios()">
+                    💾 Guardar horarios
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- INSCRITOS -->
+
+        <section
+            id="inscritos"
+            class="hidden">
+
+            <div class="panel">
+
+                <h2>
+                    Personas inscritas
+                </h2>
+
+
+                <button onclick="exportarCSV()">
+                    📥 Exportar CSV
+                </button>
+
+
+                <div class="table">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Nombre
+                                </th>
+
+                                <th>
+                                    Edad
+                                </th>
+
+                                <th>
+                                    Teléfono
+                                </th>
+
+                                <th>
+                                    Correo
+                                </th>
+
+                                <th>
+                                    Danza
+                                </th>
+
+                                <th>
+                                    Nivel
+                                </th>
+
+                                <th>
+                                    Acción
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="listaInscritos">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

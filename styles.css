@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #241827;
+    background: white;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 7%;
+
+    background: rgba(15, 10, 20, .95);
+
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.logo:first-letter {
+    color: #e52b78;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ed4d92;
+}
+
+.menu-btn {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 8%;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            #7b2cbf,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0b0810,
+            #25112f
+        );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content > span,
+.registration-text > span,
+.section-title > span {
+    color: #ef4c91;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 90px);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #d8cedd;
+    max-width: 650px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+
+    background: #d9216a;
+    color: white;
+
+    border-radius: 30px;
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 1px solid white;
+}
+
+
+/* SECCIONES */
+
+.section {
+    padding: 100px 7%;
+}
+
+.gray {
+    background: #f7f3f8;
+}
+
+.section-title {
+    max-width: 750px;
+    text-align: center;
+    margin: 0 auto 50px;
+}
+
+.section-title h2 {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: #756b7b;
+}
+
+
+/* MISION */
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    padding: 30px;
+
+    border: 1px solid #eee;
+
+    border-radius: 20px;
+
+    background: white;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.card .icon {
+    font-size: 35px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 23px;
+}
+
+.card p {
+    color: #756b7b;
+}
+
+
+/* ESTILOS */
+
+.dance-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.dance-card {
+    min-height: 230px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.dance-card div {
+    font-size: 45px;
+}
+
+.dance-card h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.dance-card p {
+    color: #eee;
+}
+
+.urbano {
+    background: linear-gradient(135deg,#29133b,#d9216a);
+}
+
+.latino {
+    background: linear-gradient(135deg,#ff8b00,#d9216a);
+}
+
+.contemporaneo {
+    background: linear-gradient(135deg,#332b63,#7b2cbf);
+}
+
+.folklore {
+    background: linear-gradient(135deg,#006d77,#ef476f);
+}
+
+.infantil {
+    background: linear-gradient(135deg,#118ab2,#ffd166);
+}
+
+.fitness {
+    background: linear-gradient(135deg,#22223b,#f72585);
+}
+
+
+/* TABLA */
+
+.table-container {
+    max-width: 1100px;
+    margin: auto;
+
+    overflow-x: auto;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th {
+    background: #18111f;
+    color: white;
+    padding: 18px;
+    text-align: left;
+}
+
+td {
+    padding: 17px;
+    border-bottom: 1px solid #eee;
+}
+
+
+/* INSCRIPCION */
+
+.registration {
+    padding: 100px 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17101f,
+            #451750
+        );
+
+    color: white;
+}
+
+.registration-text h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.registration-text p {
+    color: #ddd;
+}
+
+.registration-text ul {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.registration-text li {
+    margin: 13px 0;
+}
+
+
+/* FORMULARIO */
+
+form {
+    background: white;
+    color: #241827;
+
+    padding: 30px;
+
+    border-radius: 20px;
+}
+
+form label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 7px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #d9216a;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #b81858;
+}
+
+#formMessage {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+
+/* CONTACTO */
+
+.contact {
+    max-width: 700px;
+    margin: auto;
+
+    background: #f7f3f8;
+
+    padding: 35px;
+
+    border-radius: 20px;
+}
+
+.contact p {
+    margin: 15px 0;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #0d0a11;
+    color: white;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+footer p {
+    color: #aaa;
+    margin: 7px;
+}
+
+footer a {
+    color: #ef4c91;
+    text-decoration: none;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        background: #17101f;
+
+        flex-direction: column;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .cards,
+    .dance-grid,
+    .registration {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-text h2 {
+        font-size: 42px;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
